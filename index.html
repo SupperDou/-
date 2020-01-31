@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>我的HTML</title>
-		<meta name = "keywords" content ="HTML创建文件">
-		<meta name ="description" content="我的第一个HTML文件">
-		<style>
-			th,td{
-				width: 100px;
-			}
-			/* body{
-				background: lightblue;
-				/* 背景颜色 */
-			/* } */ 
-		body {
-			
-		background-image:url('C:\Users\14688\Desktop\HTML5布局之路 书中完整案例html\images\demo_pic.png');	
-		background-repeat: no-repeat;
-		}		
-		</style>
-	</head>
-	<body>
-		<h1>这是标题</h1>
-		<div>
-			这是我的第一个THML文件·	
-		</div>
-		<div>1</div>
-		<div>2</div>
-		<div class="meirong" id="die">3</div>		
-		<h1>这是1级标题</h1>
-		<h2>这是2级标题</h2>
-		<h3>这是3级标题</h3>
-		<h4>这是4级标题</h4>
-		<h5>这是5级标题</h5>
-		<h6>这是6级标题</h6>
-		<img src="../psbJ6X62XK7.jpg" height="300" title="不存在" alt="相对路径" >
-		<img src="D:/psbJ6X62XK7.jpg" width="200px" title="桌面壁纸" alt="这是一张壁纸" />
-		<p>段落，只能作用于一段文字</p>
-		<!-- 超链接 跳转网页/文件路径 -->
-		<a href="http://www.baidu.com"> <img src="D:/psbJ6X62XK7.jpg" >跳转到百度</a>
-		<a href="01_a.html" ></a>
-		<!-- 在新窗口打开 -->
-		<a href="www.baidu.com" target="_blank" title="点击跳转到百度"></a>
-		<table border="1">
-			<!-- 标题 -->
-			<caption>人物介绍</caption>
-			<thead>
-				<tr>
-					<th>姓名</th>
-					<th>年龄</th>
-					<th>性别</th>
-					<th>特点</th>
-				</tr>
-			</thead>
-			<!-- 表头 -->
-			<tbody>
-				<!-- 主体 -->
-				<tr>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>4</th>
-			</tr>
-			<tr>
-				<td>第一行1</td>
-				<td>第一行2</td>
-				<td>第一行3</td>
-				<td>第一行4</td>
-			</tr>
-			<tr>
-				<td>第二行1</td>
-				<td>第二行2</td>
-				<td>第二行3</td>
-				<td>第二行4</td>
-			</tr>
-			</tbody>
-			
-			<!-- 合并单元格 -->
-			<tr>
-				<td rowspan="2"></td>
-				<td colspan="2"></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		<form>
-			<p>
-				文本框：<input type="text" value="默认文本"/>
-			</p>
-			<p>
-				密码框：<input type="password"/>
-			</p>
-			<p>
-				个人简介：
-				<!-- rows表示多少行，cols表示多少字节 -->
-				<textarea cols="30" rows="10">默认的文本</textarea>
-			</p>
-			<p>
-				<select>
-					选择所在城市：
-					<option>北京</option>
-					<option>上海</option>
-					<option>四川</option>
-					<option>成都</option>
-				</select>
-				
-			</p>
-			<p>
-				<input type="button" value="普通按钮"/>
-				<input type="reset" value="重置按钮" />
-				<input type="submit" value="提交按钮" />
-			</p>
-			<p>
-				性别：
-				<input type="radio" name="sex"/>男
-				<input type="radio" name="sex"/>女
-				<input type="radio" name="sex"/>保密
-				<!-- 单选框，name属性值必须一致 -->
-				
-			</p>
-			<p>
-				<!-- 多选框 -->
-				<input type="checkbox" checked="checked" id="name" value="hobby" />
-				<label for="name">唱歌</label>
-				<!-- 选项与文字绑定 -->
-				<input type="checkbox" value="hobby" />跳舞
-				<input type="checkbox" value="hobby" />Rap
-				<input type="checkbox" value="hobby" />篮球
-			</p>
-		</form>
-		
-	</body>
+<head>
+<style>
+	.diy-bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+		background-image: url(loginbg.jpg);
+		background-size: cover;
+	}
+</style>
+</head>
+
+<body style="margin: 0;">
+<div id="particles-js" class="diy-bg">
+    <canvas class="particles-js-canvas-el" width="980" height="1742" style="width: 100%; height: 100%;"></canvas>
+</div>
+<script src="particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 120,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: "#ffffff"
+            },
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                },
+                polygon: {
+                    nb_sides: 5
+                },
+                image: {
+                    src: "img/github.svg",
+                    width: 100,
+                    height: 100
+                }
+            },
+            opacity: {
+                value: .5,
+                random: false,
+                anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: .1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 1,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 20,
+                    size_min: .1,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: true,
+                distance: 40,
+                color: "#fff",
+                opacity: 1,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 3,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "grab"
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 120,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 300
+                },
+                push: {
+                    particles_nb: 4
+                },
+                remove: {
+                    particles_nb: 2
+                }
+            }
+        },
+        retina_detect: true,
+        config_demo: {
+            hide_card: false,
+            background_color: "#b61924",
+            background_image: "",
+            background_position: "50% 50%",
+            background_repeat: "no-repeat",
+            background_size: "cover"
+        }
+    });
+</script>
+
+</body>
 </html>
